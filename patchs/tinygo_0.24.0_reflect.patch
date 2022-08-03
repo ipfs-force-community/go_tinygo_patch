@@ -32,13 +32,14 @@ index cb784df6..06714487 100644
  // New is the reflect equivalent of the new(T) keyword, returning a pointer to a
 diff --git a/targets/fvm.json b/targets/fvm.json
 new file mode 100644
-index 00000000..8ff4c3a2
+index 00000000..1758f17e
 --- /dev/null
 +++ b/targets/fvm.json
-@@ -0,0 +1,18 @@
+@@ -0,0 +1,22 @@
 +{
 +	"llvm-target":   "wasm32-unknown-wasi",
 +	"cpu":           "generic",
++	"features":      "+bulk-memory",
 +	"build-tags":    ["tinygo.wasm", "wasi"],
 +	"goos":          "linux",
 +	"goarch":        "arm",
@@ -46,6 +47,9 @@ index 00000000..8ff4c3a2
 +	"libc":          "wasi-libc",
 +	"scheduler":     "asyncify",
 +	"default-stack-size": 16384,
++	"cflags": [
++		"-mbulk-memory"
++	],
 +	"ldflags": [
 +		"--allow-undefined",
 +		"--stack-first",
