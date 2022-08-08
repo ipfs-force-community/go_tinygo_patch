@@ -37,7 +37,7 @@ index 00000000..1758f17e
 +++ b/targets/fvm.json
 @@ -0,0 +1,22 @@
 +{
-+	"llvm-target":   "wasm32-unknown-wasi",
++	"llvm-target":   "wasm32-unknown-wacd si",
 +	"cpu":           "generic",
 +	"features":      "+bulk-memory",
 +	"build-tags":    ["tinygo.wasm", "wasi"],
