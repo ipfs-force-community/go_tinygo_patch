@@ -31,7 +31,7 @@ index cb784df6..06714487 100644
  
  // New is the reflect equivalent of the new(T) keyword, returning a pointer to a
 diff --git a/targets/wasi.json b/targets/wasi.json
-index 64d86469..1758f17e 100644
+index dfec729e..fe953486 100644
 --- a/targets/wasi.json
 +++ b/targets/wasi.json
 @@ -1,7 +1,7 @@
@@ -40,7 +40,7 @@ index 64d86469..1758f17e 100644
  	"cpu":           "generic",
 -	"features":      "+bulk-memory,+nontrapping-fptoint,+sign-ext",
 +	"features":      "+bulk-memory",
- 	"build-tags":    ["tinygo.wasm", "wasi"],
+ 	"build-tags":    ["tinygo.wasm", "wasi", "runtime_memhash_leveldb"],
  	"goos":          "linux",
  	"goarch":        "arm",
 @@ -10,9 +10,7 @@
